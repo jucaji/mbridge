@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Multi CBDC Bridge Use Case Proposal
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,27 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Multi CBDC Bridge Use Case Proposal</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <div class="row">
+    <div class="col-12">
+      <div class="quality-select">
+        <form action="#">
+          <div class="input-counter" style="text-align: center;">
+            <button (click)="subtratZoom()" class="mat-mini-fab"><mat-icon class="lmat-mini-fab"> - </mat-icon></button>
+            Zoom
+            <button (click)="addZoom()" class="mat-mini-fab"><mat-icon class="la la-plus"> + </mat-icon></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <pdf-viewer [src]="pdfSrc"
+              [render-text]="true"
+              [original-size]="false"
+              [zoom-scale] = "'page-width'"
+              [zoom]="zoom"
+              style="width: 400px; height: 800px"
+  ></pdf-viewer>
 </ion-content>
